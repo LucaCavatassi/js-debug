@@ -42,13 +42,13 @@ printColorsNumber();
 
 
 // // ESERCIZIO 3
-function addNumbers() {
-    const userNumber = parseInt(prompt('Inserisci un numero'));
-    const total = userNumber + 12;
+// function addNumbers() {
+//     const userNumber = parseInt(prompt('Inserisci un numero'));
+//     const total = userNumber + 12;
 
-    console.log(`Il risultato finale è ${total}`);
-}
-addNumbers();
+//     console.log(`Il risultato finale è ${total}`);
+// }
+// addNumbers();
 
 // Dato in prompt un numero dall'utente, questa funzione ti fa il log del numero + 12
 // Il problema è che il prompt da sempre come dato in output una stringa quindi facendo stringa + number, otterremo sempre la concatenzione, quindi per risolvere, basta trasformare il prompt in number invece che string.
@@ -59,10 +59,10 @@ addNumbers();
 //     const addresses = ['mymail@mail.com', 'yourmail@mail.com', 'hermail@mail.com', 'hismail@mail.com'];
 //     const userEmail = prompt('Inserisci il tuo indirizzo email');
 
-//     let grantAccess = 'false';
+//     let grantAccess = false;
 
 //     if (addresses.includes(userEmail)) {
-//         grantAccess = 'true';
+//         grantAccess = true;
 //     }
 
 //     if (grantAccess === true) {
@@ -73,39 +73,42 @@ addNumbers();
 // }
 // checkAccess();
 
+// La funzione controlla se l'email è contenuta nell'array, se è contenuta stampa acceso consentito, altrimenti stampa accesso negato. 
+// L'errore sta nel fatto che usiamo una variabile flag che di base è false ma che poi diventa true se l'email è inclusa, la logica è giusta soltanto true e false sono valori booliani, e non vanno scritti fra gli apici. 
+
 
 // // ESERCIZIO 5 (suggerimento: c'è un solo errore)
-// function checkAccessImproved() {
-//     const addresses = ['mymail@mail.com', 'yourmail@mail.com', 'hermail@mail.com', 'hismail@mail.com'];
+function checkAccessImproved() {
+    const addresses = ['mymail@mail.com', 'yourmail@mail.com', 'hermail@mail.com', 'hismail@mail.com'];
 
-//     const userEmail = prompt('Inserisci il tuo indirizzo email');
+    const userEmail = prompt('Inserisci il tuo indirizzo email');
 
-//     let grantAccess = 'false';
+    let grantAccess = false;
 
-//     for (let i = 0; i < addresses.length; i++) {
-//         const email = addresses[i];
+    for (let i = 0; i < addresses.length; i++) {
+        const email = addresses[i];
 
-//         if (userEmail.length > 5) {
+        if (userEmail.length > 5) {
 
-//             if (email === userEmail) {
-//                 grantAccess = 'true';
+            if (email === userEmail) {
+                grantAccess = true;
 
-//             }
+            }
 
-//         }
+        }
 
-//         if (grantAccess) {
-//             console.log('Accesso consentito!');
-//         } else {
-//             console.log('Accesso negato!');
-//         }
-//     }
-// } 
-//     checkAccessImproved();
+        if (grantAccess) {
+            console.log('Accesso consentito!');
+        } else {
+            console.log('Accesso negato!');
+        }
+    }
+} 
+    checkAccessImproved();
 
 
 
-// // mancava graffa sopra check access
+// Fa la stessa cosa di Esercizio 4, mancava la graffa a chiudere in fondo e di nuovo la flag boolian valore scritto fra apici.
 
 
 
